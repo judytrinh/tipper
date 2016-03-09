@@ -29,6 +29,7 @@ class SettingsViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+    
         let defaults = NSUserDefaults.standardUserDefaults()
         let index = defaults.integerForKey("defaultTipIndex")
         defaultTipControl.selectedSegmentIndex = index
@@ -36,6 +37,7 @@ class SettingsViewController: UIViewController {
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
+    
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(defaultTipControl.selectedSegmentIndex, forKey: "defaultTipIndex")
         defaults.synchronize()

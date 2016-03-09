@@ -22,6 +22,10 @@ class TipViewController: UIViewController {
         tipLabel.text = "$0.00"
         totalLabel.text = "$0.00"
         
+        // Focus text input so keyboard automatically shows
+        billField.becomeFirstResponder()
+        
+        // Set default tip amount at the very beginning
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(1, forKey: "defaultTipIndex")
         defaults.synchronize()
@@ -50,9 +54,17 @@ class TipViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+
+        // Load defaults from settings
         let defaults = NSUserDefaults.standardUserDefaults()
         let index = defaults.integerForKey("defaultTipIndex")
         tipControl.selectedSegmentIndex = index
+        
+        // Recalculate tip and total based on new default
+        onEditingChanged(billField)
+        
+        // Refocus text input when we come back to tip page
+        billField.becomeFirstResponder()
     }
 }
 
