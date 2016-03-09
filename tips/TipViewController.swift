@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TipViewController.swift
 //  tips
 //
 //  Created by Judy Trinh on 3/6/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TipViewController: UIViewController {
 
     
     @IBOutlet weak var tipControl: UISegmentedControl!
