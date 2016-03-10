@@ -12,7 +12,7 @@ Completed:
 * [ ] Optional: Remembering the bill amount across app restarts (if <10mins)
 * [ ] Optional: Using locale-specific currency and currency thousands separators.
 * [x] Optional: Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
-* [ ] Optional: Add a light/dark color theme to the settings view. In viewWillAppear, update views with the correct theme colors.
+* [x] Optional: Add a light/dark color theme to the settings view. In viewWillAppear, update views with the correct theme colors.
 
 ![Video Walkthrough](name of your gif file.gif)
 
