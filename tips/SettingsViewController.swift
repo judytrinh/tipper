@@ -11,6 +11,7 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var defaultTipControl: UISegmentedControl!
+    @IBOutlet weak var defaultThemeControl: UISegmentedControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +32,10 @@ class SettingsViewController: UIViewController {
         super.viewWillAppear(animated)
     
         let defaults = NSUserDefaults.standardUserDefaults()
-        let index = defaults.integerForKey("defaultTipIndex")
-        defaultTipControl.selectedSegmentIndex = index
+        let indexTip = defaults.integerForKey("defaultTipIndex")
+        let indexTheme = defaults.integerForKey("defaultThemeIndex")
+        defaultTipControl.selectedSegmentIndex = indexTip
+        defaultThemeControl.selectedSegmentIndex = indexTheme
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -40,6 +43,7 @@ class SettingsViewController: UIViewController {
     
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setInteger(defaultTipControl.selectedSegmentIndex, forKey: "defaultTipIndex")
+        defaults.setInteger(defaultThemeControl.selectedSegmentIndex, forKey: "defaultThemeIndex")
         defaults.synchronize()
     }
     
