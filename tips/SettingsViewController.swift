@@ -10,6 +10,7 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var defaultTipControl: UISegmentedControl!
     @IBOutlet weak var defaultThemeControl: UISegmentedControl!
 
@@ -24,6 +25,13 @@ class SettingsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func themeChanged(sender: AnyObject) {
+        let color = defaultThemeControl.selectedSegmentIndex == 0 ? LightTheme.darkColor : DarkTheme.darkColor
+        doneButton.tintColor = color
+        defaultThemeControl.tintColor = color
+        defaultTipControl.tintColor = color
+    }
+
     @IBAction func popSettingsView(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -36,6 +44,11 @@ class SettingsViewController: UIViewController {
         let indexTheme = defaults.integerForKey("defaultThemeIndex")
         defaultTipControl.selectedSegmentIndex = indexTip
         defaultThemeControl.selectedSegmentIndex = indexTheme
+        
+        let color = indexTheme == 0 ? LightTheme.darkColor : DarkTheme.darkColor
+        doneButton.tintColor = color
+        defaultThemeControl.tintColor = color
+        defaultTipControl.tintColor = color
     }
     
     override func viewWillDisappear(animated: Bool) {

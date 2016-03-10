@@ -157,6 +157,9 @@
                                     <segment title="Light"/>
                                     <segment title="Dark"/>
                                 </segments>
+                                <connections>
+                                    <action selector="themeChanged:" destination="UMf-xn-ic6" eventType="valueChanged" id="eGG-Ii-Uid"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -164,6 +167,7 @@
                     <connections>
                         <outlet property="defaultThemeControl" destination="Pou-rb-nOB" id="WUe-dc-lmy"/>
                         <outlet property="defaultTipControl" destination="Fce-wN-Xec" id="YSw-SS-qtV"/>
+                        <outlet property="doneButton" destination="quM-LJ-ZrE" id="iMu-fl-8e3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOf-yg-h94" userLabel="First Responder" sceneMemberID="firstResponder"/>
