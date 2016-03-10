@@ -125,6 +125,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wnx-kP-u2o">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quM-LJ-ZrE">
                                 <rect key="frame" x="16" y="29" width="50" height="30"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
@@ -165,9 +169,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="backgroundView" destination="Wnx-kP-u2o" id="Khc-zO-KBl"/>
                         <outlet property="defaultThemeControl" destination="Pou-rb-nOB" id="WUe-dc-lmy"/>
                         <outlet property="defaultTipControl" destination="Fce-wN-Xec" id="YSw-SS-qtV"/>
                         <outlet property="doneButton" destination="quM-LJ-ZrE" id="iMu-fl-8e3"/>
+                        <outlet property="themeLabel" destination="dh5-vh-W7z" id="8Sc-IF-0e0"/>
+                        <outlet property="tipPercentLabel" destination="Q9J-Rf-xec" id="QbX-qJ-Q6a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOf-yg-h94" userLabel="First Responder" sceneMemberID="firstResponder"/>

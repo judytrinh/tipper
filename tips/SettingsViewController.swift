@@ -11,6 +11,9 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var doneButton: UIButton!
+    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var themeLabel: UILabel!
+    @IBOutlet weak var tipPercentLabel: UILabel!
     @IBOutlet weak var defaultTipControl: UISegmentedControl!
     @IBOutlet weak var defaultThemeControl: UISegmentedControl!
 
@@ -27,9 +30,23 @@ class SettingsViewController: UIViewController {
 
     @IBAction func themeChanged(sender: AnyObject) {
         let color = defaultThemeControl.selectedSegmentIndex == 0 ? LightTheme.darkColor : DarkTheme.darkColor
-        doneButton.tintColor = color
-        defaultThemeControl.tintColor = color
-        defaultTipControl.tintColor = color
+        let white = UIColor.whiteColor()
+        
+        if defaultThemeControl.selectedSegmentIndex == 0 {
+            doneButton.tintColor = color
+            defaultThemeControl.tintColor = color
+            defaultTipControl.tintColor = color
+            themeLabel.textColor = color
+            tipPercentLabel.textColor = color
+            backgroundView.backgroundColor = white
+        } else {
+            doneButton.tintColor = white
+            defaultThemeControl.tintColor = white
+            defaultTipControl.tintColor = white
+            themeLabel.textColor = white
+            tipPercentLabel.textColor = white
+            backgroundView.backgroundColor = color
+        }
     }
 
     @IBAction func popSettingsView(sender: AnyObject) {
@@ -46,9 +63,23 @@ class SettingsViewController: UIViewController {
         defaultThemeControl.selectedSegmentIndex = indexTheme
         
         let color = indexTheme == 0 ? LightTheme.darkColor : DarkTheme.darkColor
-        doneButton.tintColor = color
-        defaultThemeControl.tintColor = color
-        defaultTipControl.tintColor = color
+        let white = UIColor.whiteColor()
+
+        if indexTheme == 0 {
+            doneButton.tintColor = color
+            defaultThemeControl.tintColor = color
+            defaultTipControl.tintColor = color
+            themeLabel.textColor = color
+            tipPercentLabel.textColor = color
+            backgroundView.backgroundColor = white
+        } else {
+            doneButton.tintColor = white
+            defaultThemeControl.tintColor = white
+            defaultTipControl.tintColor = white
+            themeLabel.textColor = white
+            tipPercentLabel.textColor = white
+            backgroundView.backgroundColor = color
+        }
     }
     
     override func viewWillDisappear(animated: Bool) {
