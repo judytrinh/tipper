@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F51D9B8F1C8EACEB00F144EE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51D9B8E1C8EACEB00F144EE /* SettingsViewController.swift */; };
+		F52877831C94CC12009694A8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52877821C94CC12009694A8 /* Constants.swift */; };
 		F528885F1C8D318D00B0134D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F528885E1C8D318D00B0134D /* AppDelegate.swift */; };
 		F52888611C8D318D00B0134D /* TipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52888601C8D318D00B0134D /* TipViewController.swift */; };
 		F52888641C8D318D00B0134D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F52888621C8D318D00B0134D /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		F51D9B8E1C8EACEB00F144EE /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		F52877821C94CC12009694A8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F528885B1C8D318D00B0134D /* tipper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tipper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F528885E1C8D318D00B0134D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F52888601C8D318D00B0134D /* TipViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				F51D9B8E1C8EACEB00F144EE /* SettingsViewController.swift */,
 				F52888651C8D318D00B0134D /* Assets.xcassets */,
 				F528886A1C8D318D00B0134D /* Info.plist */,
+				F52877821C94CC12009694A8 /* Constants.swift */,
 			);
 			path = tips;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				F52888611C8D318D00B0134D /* TipViewController.swift in Sources */,
 				F528885F1C8D318D00B0134D /* AppDelegate.swift in Sources */,
 				F51D9B8F1C8EACEB00F144EE /* SettingsViewController.swift in Sources */,
+				F52877831C94CC12009694A8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

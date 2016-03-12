@@ -8,16 +8,6 @@
 
 import UIKit
 
-struct LightTheme {
-    static var lightColor = UIColor(red: 255/255.0, green: 244/255.0, blue: 241/255.0, alpha: 1.0)
-    static var darkColor = UIColor(red: 255/255.0, green: 97/255.0, blue: 136/255.0, alpha: 1.0)
-}
-
-struct DarkTheme {
-    static var lightColor = UIColor(red: 237/255.0, green: 239/255.0, blue: 254/255.0, alpha: 1.0)
-    static var darkColor = UIColor(red: 100/255.0, green: 78/255.0, blue: 151/255.0, alpha: 1.0)
-}
-
 class TipViewController: UIViewController {
 
     @IBOutlet weak var tipControl: UISegmentedControl!
@@ -38,11 +28,21 @@ class TipViewController: UIViewController {
         // Focus text input so keyboard automatically shows
         billField.becomeFirstResponder()
         
-        // Set defaults at the very beginning
+        // Load defaults at the very beginning, set if none exist
         let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setInteger(1, forKey: "defaultTipIndex")
-        defaults.setInteger(0, forKey: "defaultThemeIndex")
-        defaults.synchronize()
+        if defaults.objectForKey("defaultTipIndex") != nil {
+            setTheme(defaults.integerForKey("defaultTipIndex"))
+        } else {
+            defaults.setInteger(1, forKey: "defaultTipIndex")
+            defaults.synchronize()
+        }
+        
+        if defaults.objectForKey("defaultThemeIndex") != nil {
+            setTheme(defaults.integerForKey("defaultThemeIndex"))
+        } else {
+            defaults.setInteger(0, forKey: "defaultThemeIndex")
+            defaults.synchronize()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,24 +66,32 @@ class TipViewController: UIViewController {
         view.endEditing(true)
     }
     
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-
-        // Load defaults from settings
-        let defaults = NSUserDefaults.standardUserDefaults()
-        let indexTip = defaults.integerForKey("defaultTipIndex")
-        let indexTheme = defaults.integerForKey("defaultThemeIndex")
-        tipControl.selectedSegmentIndex = indexTip
-
+    func setTheme(indexTheme: Int) {
         let lightColor = indexTheme == 0 ? LightTheme.lightColor : DarkTheme.lightColor
         let darkColor = indexTheme == 0 ? LightTheme.darkColor : DarkTheme.darkColor
-
+        
         backgroundTop.backgroundColor = lightColor
         backgroundBottom.backgroundColor = darkColor
         billField.tintColor = darkColor
         billField.textColor = darkColor
         tipControl.tintColor = darkColor
         settingsButtonItem.tintColor = darkColor
+    }
+    
+    func setTipPercentage(indexTip: Int) {
+        tipControl.selectedSegmentIndex = indexTip
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Load defaults from settings
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let indexTip = defaults.integerForKey("defaultTipIndex")
+        let indexTheme = defaults.integerForKey("defaultThemeIndex")
+        
+        setTipPercentage(indexTip)
+        setTheme(indexTheme)
         
         // Recalculate tip and total based on new default
         onEditingChanged(billField)
