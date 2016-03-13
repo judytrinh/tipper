@@ -30,6 +30,7 @@ class TipViewController: UIViewController {
         
         // Load defaults at the very beginning, set if none exist
         let defaults = NSUserDefaults.standardUserDefaults()
+
         if defaults.objectForKey("defaultTipIndex") != nil {
             setTheme(defaults.integerForKey("defaultTipIndex"))
         } else {
@@ -43,6 +44,25 @@ class TipViewController: UIViewController {
             defaults.setInteger(0, forKey: "defaultThemeIndex")
             defaults.synchronize()
         }
+        
+        let lastTimeOpened = defaults.objectForKey("lastTimeOpened")
+        let timeElapsed = NSDate().timeIntervalSinceDate(lastTimeOpened as! NSDate)
+        if timeElapsed / 60 < 10 {
+            billField.text = defaults.objectForKey("billAmount") as! String
+        }
+        
+        NSNotificationCenter.defaultCenter().addObserver(
+            self,
+            selector: "rememberBillAmount",
+            name: UIApplicationWillTerminateNotification,
+            object: nil
+        )
+    }
+    
+    func rememberBillAmount() {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(billField.text, forKey: "billAmount")
+        defaults.setObject(NSDate(), forKey: "lastTimeOpened")
     }
 
     override func didReceiveMemoryWarning() {
