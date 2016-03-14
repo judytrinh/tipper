@@ -31,21 +31,25 @@ class SettingsViewController: UIViewController {
     @IBAction func themeChanged(sender: AnyObject) {
         let color = defaultThemeControl.selectedSegmentIndex == 0 ? LightTheme.darkColor : DarkTheme.darkColor
         let white = UIColor.whiteColor()
-        
+
         if defaultThemeControl.selectedSegmentIndex == 0 {
-            doneButton.tintColor = color
-            defaultThemeControl.tintColor = color
-            defaultTipControl.tintColor = color
-            themeLabel.textColor = color
-            tipPercentLabel.textColor = color
-            backgroundView.backgroundColor = white
+            UIView.animateWithDuration(0.4, animations: {
+                self.doneButton.tintColor = color
+                self.defaultThemeControl.tintColor = color
+                self.defaultTipControl.tintColor = color
+                self.themeLabel.textColor = color
+                self.tipPercentLabel.textColor = color
+                self.backgroundView.backgroundColor = white
+            })
         } else {
-            doneButton.tintColor = white
-            defaultThemeControl.tintColor = white
-            defaultTipControl.tintColor = white
-            themeLabel.textColor = white
-            tipPercentLabel.textColor = white
-            backgroundView.backgroundColor = color
+            UIView.animateWithDuration(0.4, animations: {
+                self.doneButton.tintColor = white
+                self.defaultThemeControl.tintColor = white
+                self.defaultTipControl.tintColor = white
+                self.themeLabel.textColor = white
+                self.tipPercentLabel.textColor = white
+                self.backgroundView.backgroundColor = color
+            })
         }
     }
 
