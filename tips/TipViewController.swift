@@ -57,6 +57,14 @@ class TipViewController: UIViewController {
             name: UIApplicationWillTerminateNotification,
             object: nil
         )
+        
+        if billField.text == "" {
+            backgroundBottom.alpha = 0
+            backgroundBottom.transform = CGAffineTransformMakeTranslation(0, 150)
+            tipControl.alpha = 0
+            tipControl.transform = CGAffineTransformMakeTranslation(0, 150)
+            billField.transform = CGAffineTransformMakeTranslation(0, 70)
+        }
     }
     
     func rememberBillAmount() {
@@ -82,10 +90,30 @@ class TipViewController: UIViewController {
         formatter.numberStyle = .CurrencyStyle
         tipLabel.text = formatter.stringFromNumber(tip)
         totalLabel.text = formatter.stringFromNumber(total)
+        
+        if billField.text == "" {
+            UIView.animateWithDuration(0.5, animations: {
+                self.backgroundBottom.alpha = 0
+                self.backgroundBottom.transform = CGAffineTransformMakeTranslation(0, 150)
+                self.tipControl.alpha = 0
+                self.tipControl.transform = CGAffineTransformMakeTranslation(0, 150)
+                self.billField.transform = CGAffineTransformMakeTranslation(0, 70)
+            })
+        } else {
+            UIView.animateWithDuration(0.5, animations: {
+                self.backgroundBottom.alpha = 1
+                self.backgroundBottom.transform = CGAffineTransformMakeTranslation(0, 0)
+                self.tipControl.alpha = 1
+                self.tipControl.transform = CGAffineTransformMakeTranslation(0, 0)
+                self.billField.transform = CGAffineTransformMakeTranslation(0, 0)
+            })
+        }
     }
 
     @IBAction func onTap(sender: AnyObject) {
-        view.endEditing(true)
+        if billField.text != "" {
+            view.endEditing(true)
+        }
     }
     
     func setTheme(indexTheme: Int) {
