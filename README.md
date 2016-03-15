@@ -15,5 +15,3 @@ Completed:
 * [x] Optional: Add a light/dark color theme to the settings view. In viewWillAppear, update views with the correct theme colors.
 
 ![Video Walkthrough](tipper-walkthrough.gif)
-
-Note: to embed the gif file, just check your gif file into your repo and update the name of the file above.
