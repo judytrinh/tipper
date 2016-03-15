@@ -14,6 +14,6 @@ Completed:
 * [x] Optional: Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 * [x] Optional: Add a light/dark color theme to the settings view. In viewWillAppear, update views with the correct theme colors.
 
-![Video Walkthrough](name of your gif file.gif)
+![Video Walkthrough](tipper-walkthrough.gif)
 
 Note: to embed the gif file, just check your gif file into your repo and update the name of the file above.
