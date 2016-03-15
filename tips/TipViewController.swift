@@ -74,8 +74,13 @@ class TipViewController: UIViewController {
             backgroundBottom.transform = CGAffineTransformMakeTranslation(0, 150)
             tipControl.alpha = 0
             tipControl.transform = CGAffineTransformMakeTranslation(0, 150)
-            billField.transform = CGAffineTransformMakeTranslation(0, 70)
+            billField.transform = CGAffineTransformMakeTranslation(0, 85)
         }
+
+        let localeCode = NSLocale.currentLocale().localeIdentifier
+        let localeObject = NSLocale(localeIdentifier: localeCode as String)
+        let symbol = localeObject.objectForKey(NSLocaleCurrencySymbol) as? String
+        billField.placeholder = symbol
     }
     
     func rememberBillAmount() {
@@ -112,7 +117,7 @@ class TipViewController: UIViewController {
                 self.backgroundBottom.transform = CGAffineTransformMakeTranslation(0, 150)
                 self.tipControl.alpha = 0
                 self.tipControl.transform = CGAffineTransformMakeTranslation(0, 150)
-                self.billField.transform = CGAffineTransformMakeTranslation(0, 70)
+                self.billField.transform = CGAffineTransformMakeTranslation(0, 85)
             })
         } else {
             UIView.animateWithDuration(0.5, animations: {
