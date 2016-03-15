@@ -14,6 +14,17 @@ class TipViewController: UIViewController {
     @IBOutlet weak var billField: UITextField!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var plusLabel: UILabel!
+    @IBOutlet weak var equalLabel: UILabel!
+
+    @IBOutlet weak var twoPersonSplitBillLabel: UILabel!
+    @IBOutlet weak var threePersonSplitBillLabel: UILabel!
+    @IBOutlet weak var fourPersonSplitBillLabel: UILabel!
+    @IBOutlet weak var fivePersonSplitBillLabel: UILabel!
+    @IBOutlet weak var twoPersonLabel: UILabel!
+    @IBOutlet weak var threePersonLabel: UILabel!
+    @IBOutlet weak var fourPersonLabel: UILabel!
+    @IBOutlet weak var fivePersonLabel: UILabel!
     
     @IBOutlet weak var backgroundTop: UIView!
     @IBOutlet weak var backgroundBottom: UIView!
@@ -90,6 +101,10 @@ class TipViewController: UIViewController {
         formatter.numberStyle = .CurrencyStyle
         tipLabel.text = formatter.stringFromNumber(tip)
         totalLabel.text = formatter.stringFromNumber(total)
+        twoPersonSplitBillLabel.text = formatter.stringFromNumber(total / 2)
+        threePersonSplitBillLabel.text = formatter.stringFromNumber(total / 3)
+        fourPersonSplitBillLabel.text = formatter.stringFromNumber(total / 4)
+        fivePersonSplitBillLabel.text = formatter.stringFromNumber(total / 5)
         
         if billField.text == "" {
             UIView.animateWithDuration(0.5, animations: {
@@ -125,7 +140,17 @@ class TipViewController: UIViewController {
         billField.tintColor = darkColor
         billField.textColor = darkColor
         tipControl.tintColor = darkColor
+        plusLabel.textColor = lightColor
+        equalLabel.textColor = lightColor
         settingsButtonItem.tintColor = darkColor
+        twoPersonSplitBillLabel.textColor = lightColor
+        threePersonSplitBillLabel.textColor = lightColor
+        fourPersonSplitBillLabel.textColor = lightColor
+        fivePersonSplitBillLabel.textColor = lightColor
+        twoPersonLabel.textColor = lightColor
+        threePersonLabel.textColor = lightColor
+        fourPersonLabel.textColor = lightColor
+        fivePersonLabel.textColor = lightColor
     }
     
     func setTipPercentage(indexTip: Int) {

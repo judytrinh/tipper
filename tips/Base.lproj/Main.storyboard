@@ -54,26 +54,74 @@
                                 <rect key="frame" x="0.0" y="207" width="320" height="361"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="+" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3to-WM-kns">
-                                        <rect key="frame" x="18" y="26" width="42" height="21"/>
+                                        <rect key="frame" x="18" y="28" width="42" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="=" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngB-xU-sWo">
-                                        <rect key="frame" x="18" y="75" width="59" height="30"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                        <rect key="frame" x="18" y="80" width="59" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="40"/>
                                         <color key="textColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$255.55" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DS9-lC-IYR">
-                                        <rect key="frame" x="54" y="65" width="248" height="53"/>
+                                        <rect key="frame" x="54" y="70" width="248" height="53"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="45"/>
                                         <color key="textColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$5.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXb-Nj-RLJ">
-                                        <rect key="frame" x="77" y="26" width="225" height="21"/>
+                                        <rect key="frame" x="77" y="28" width="225" height="21"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
+                                        <color key="textColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$51.11" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p6f-Sx-Jke">
+                                        <rect key="frame" x="54" y="313" width="248" height="31"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
+                                        <color key="textColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSt-2d-a6K">
+                                        <rect key="frame" x="18" y="313" width="31" height="31"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="20"/>
+                                        <color key="textColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$63.89" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW4-kT-qJb">
+                                        <rect key="frame" x="54" y="262" width="248" height="31"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="23"/>
+                                        <color key="textColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$85.18" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsX-wL-zco">
+                                        <rect key="frame" x="54" y="205" width="248" height="35"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="27"/>
+                                        <color key="textColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$127.78" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bsl-dB-xi3">
+                                        <rect key="frame" x="54" y="145" width="248" height="39"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="31"/>
+                                        <color key="textColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udc-nJ-oVZ">
+                                        <rect key="frame" x="18" y="145" width="31" height="39"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="31"/>
+                                        <color key="textColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPi-Ta-kwa">
+                                        <rect key="frame" x="18" y="205" width="31" height="35"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="27"/>
+                                        <color key="textColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="4" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wx-2p-eHC">
+                                        <rect key="frame" x="18" y="262" width="31" height="31"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="23"/>
                                         <color key="textColor" red="0.99607843139999996" green="0.95686274510000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -98,10 +146,20 @@
                         <outlet property="backgroundBottom" destination="eN6-PL-2sd" id="vEL-De-F8U"/>
                         <outlet property="backgroundTop" destination="Wk0-Kp-hph" id="ZTF-Q6-bVU"/>
                         <outlet property="billField" destination="g4S-OY-fhG" id="Mqz-FI-cgT"/>
+                        <outlet property="equalLabel" destination="ngB-xU-sWo" id="dLv-zB-hcb"/>
+                        <outlet property="fivePersonLabel" destination="vSt-2d-a6K" id="x2m-ch-b9z"/>
+                        <outlet property="fivePersonSplitBillLabel" destination="p6f-Sx-Jke" id="C8S-6j-8vU"/>
+                        <outlet property="fourPersonLabel" destination="4Wx-2p-eHC" id="Mcw-Nv-OX3"/>
+                        <outlet property="fourPersonSplitBillLabel" destination="gW4-kT-qJb" id="ZYh-nb-Wnz"/>
+                        <outlet property="plusLabel" destination="3to-WM-kns" id="SDF-lK-N6D"/>
                         <outlet property="settingsButtonItem" destination="IYl-ai-zAP" id="ENY-ku-w7l"/>
+                        <outlet property="threePersonLabel" destination="lPi-Ta-kwa" id="2BM-kB-nSg"/>
+                        <outlet property="threePersonSplitBillLabel" destination="bsX-wL-zco" id="KNL-GN-Czx"/>
                         <outlet property="tipControl" destination="NpZ-k9-PLj" id="5iO-gb-zl8"/>
                         <outlet property="tipLabel" destination="CXb-Nj-RLJ" id="bJl-Ac-h54"/>
-                        <outlet property="totalLabel" destination="DS9-lC-IYR" id="KcW-Ik-c1l"/>
+                        <outlet property="totalLabel" destination="DS9-lC-IYR" id="Z5N-ZM-Db7"/>
+                        <outlet property="twoPersonLabel" destination="Udc-nJ-oVZ" id="xhn-Px-rdr"/>
+                        <outlet property="twoPersonSplitBillLabel" destination="Bsl-dB-xi3" id="v20-lb-k3a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
